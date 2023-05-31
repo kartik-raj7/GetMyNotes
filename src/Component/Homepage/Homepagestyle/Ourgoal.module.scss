@@ -1,0 +1,67 @@
+.ourgoalContent {
+  margin: 0 8rem;
+  position: relative;
+  z-index: 1;
+}
+
+.ourgoalImage {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.whoweareImage {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.container {
+  box-sizing: border-box;
+  box-shadow: 1px 1px 3px 1px rgb(0 0 0/0.1), 0 1px 2px -1px rgb(0 0 0/0.1);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  margin-bottom: 2rem;
+}
+
+.container1 {
+  box-sizing: border-box;
+  border: 0px solid #ececec;
+  transition: none 0s ease 0s;
+  transform: none;
+  box-shadow: 1px 1px 3px 1px rgb(0 0 0/0.1), 0 1px 2px -1px rgb(0 0 0/0.1);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  // margin-bottom: 2rem;
+}
+
+.goalHeading {
+  display: flex;
+  justify-content: center;
+  color: #3f51b5;
+}
+
+.goalHeading1 {
+  display: flex;
+  justify-content: center;
+  color: #3f51b5;
+  margin: 2rem 0;
+}
+
+.containerContent {
+  margin-right: 2rem;
+  margin-top: 0rem;
+}
+
+.containerContent1 {
+  margin-left: 2rem;
+  margin-top: 0rem;
+}

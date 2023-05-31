@@ -1,0 +1,21 @@
+.universityContent {
+  margin: 2.5rem 8rem;
+  position: relative;
+  z-index: 1;
+}
+
+.universityHeading {
+  display: flex;
+  justify-content: center;
+  color: #3f51b5;
+}
+
+.container {
+  box-sizing: border-box;
+  box-shadow: 1px 1px 3px 1px rgb(0 0 0/0.1), 0 1px 2px -1px rgb(0 0 0/0.1);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
