@@ -5,6 +5,7 @@ import Banner from "../Component/Homepage/Banner";
 import Ourgoal from "../Component/Homepage/Ourgoal";
 import University from "../Component/Homepage/University";
 import Courses from "../Component/Homepage/Courses";
+import Background from "../Common/Background/Background";
 
 const TITLE = "GetMyNotes";
 const Homepage = () => {

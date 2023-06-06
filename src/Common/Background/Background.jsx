@@ -14,7 +14,7 @@ const Background = () => {
         75,
         window.innerWidth / window.innerHeight,
         0.1,
-        1000
+        10000
       );
       camera.position.z = 5;
 
@@ -24,7 +24,7 @@ const Background = () => {
 
       particles = [];
 
-      const particleCount = 1000; // Number of particles
+      const particleCount = 5000; // Number of particles
 
       for (let i = 0; i < particleCount; i++) {
         const particle = createParticle();
@@ -108,9 +108,11 @@ const Background = () => {
 
   return (
     <div
-      ref={canvasRef}
-      style={{ position: "fixed", top: "0", left: "0", zIndex: "-1" }}
-    />
+    ref={canvasRef}
+      style={{ position: "fixed", top: "0", left: "0",zIndex:'-1', height: "100vh",
+      width: "100vw",overflow:'hidden'}}
+    >
+      </div>
   );
 };
 

@@ -1,13 +1,15 @@
+@import '../../../Color.scss';
 .universityContent {
   margin: 2.5rem 8rem;
   position: relative;
   z-index: 1;
+  color:$primary-color;
 }
 
 .universityHeading {
   display: flex;
   justify-content: center;
-  color: #3f51b5;
+  color: $primary-color;
 }
 
 .container {

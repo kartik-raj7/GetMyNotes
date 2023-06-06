@@ -30,11 +30,19 @@ export const Banner = () => {
   };
 
   return (
-    <div>
-      <Background />
+    <div className={styles.herodiv}>
       <div className={styles.content}>
+        <div className={styles.hero}>
+        <div className={styles.herosub}>
         <h1 className={styles.bannerHeading}>{text}</h1>
-        <form style={{ marginBottom: "3rem" }}>
+        </div>
+        <div className={styles.herosub}
+        >
+        <img 
+        className={styles.heroimage} src='./homepageimages/herobanner.png' alt='hero'/>
+        </div>
+        </div>
+        {/* <form style={{ marginBottom: "3rem" }}>
           <TextField
             variant="outlined"
             placeholder="Search"
@@ -48,14 +56,14 @@ export const Banner = () => {
               ),
             }}
           />
-        </form>
+        </form> */}
         <Grid
           container
           spacing={9}
           style={{
-            marginBottom: "2rem",
             display: "flex",
             justifyContent: "center",
+            marginBottom:'40px',
           }}
         >
           <Grid
@@ -113,7 +121,7 @@ export const Banner = () => {
             <h4 className={styles.subTitle}>Ratings</h4>
           </Grid>
         </Grid>
-      </div>
+      </div>      
     </div>
   );
 };

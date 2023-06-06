@@ -6,19 +6,17 @@ function App() {
   const [loadingProgress, setLoadingProgress] = useState(0);
   useEffect(() => {
     const simulateLoading = () => {
-      setLoadingProgress(0); // Reset progress
+      setLoadingProgress(0);
       const progressInterval = setInterval(() => {
-        setLoadingProgress(prevProgress => prevProgress + 10); // Increment progress by 10 (adjust as needed)
-      }, 500); // Adjust the interval based on your loading logic
-  
-      // Simulate loading completion after 3 seconds (replace this with your actual loading completion logic)
+        setLoadingProgress(prevProgress => prevProgress + 10); 
+      }, 500);
       setTimeout(() => {
         clearInterval(progressInterval);
-        setLoadingProgress(100); // Set progress to 100 (loading complete)
-      }, 3000); // Adjust the duration based on your loading logic
+        setLoadingProgress(100);
+      }, 3000); 
     };
   
-    simulateLoading(); // Call the loading simulation function
+    simulateLoading();
   }, []);
   return (
     <div className="App">

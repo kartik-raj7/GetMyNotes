@@ -57,7 +57,7 @@ function GridItem({ frontIcon, backContent }) {
           ) : (
             <div
               style={{
-                backgroundColor: "#3f51b5",
+                backgroundColor: "rgba(38, 162, 102, 0.4)",
                 height: "8rem",
                 width: "8rem",
                 borderRadius: "100px",
@@ -95,7 +95,7 @@ const Courses = () => {
             frontIcon={
               <div>
                 <Computer
-                  style={{ color: "white", fontSize: "5rem", margin: "1.4rem" }}
+                  style={{ color: "#26A266", fontSize: "5rem", margin: "1.4rem" }}
                 />
                 <h4 className={styles.subTitlefront}>BTech</h4>
               </div>
@@ -115,7 +115,7 @@ const Courses = () => {
             frontIcon={
               <div>
                 <Science
-                  style={{ color: "white", fontSize: "5rem", margin: "1.4rem" }}
+                  style={{ color: "#26A266", fontSize: "5rem", margin: "1.4rem" }}
                 />
                 <h4 className={styles.subTitlefront}>BSc</h4>
               </div>
@@ -135,7 +135,7 @@ const Courses = () => {
             frontIcon={
               <div>
                 <Business
-                  style={{ color: "white", fontSize: "5rem", margin: "1.4rem" }}
+                  style={{ color: "#26A266", fontSize: "5rem", margin: "1.4rem" }}
                 />
                 <h4 className={styles.subTitlefront}>Business</h4>
               </div>
@@ -155,7 +155,7 @@ const Courses = () => {
             frontIcon={
               <div>
                 <ManageAccounts
-                  style={{ color: "white", fontSize: "5rem", margin: "1.4rem" }}
+                  style={{ color: "#26A266", fontSize: "5rem", margin: "1.4rem" }}
                 />
                 <h4 className={styles.subTitlefront}>CA</h4>
               </div>
