@@ -1,19 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Homepagestyle/Courses.module.scss";
 import { Avatar, Box, Grid, Paper } from "@mui/material";
 import { Business, Computer, ManageAccounts, Science } from "@mui/icons-material";
-// import { Grid, Paper, Avatar, Box } from "@material-ui/core";
-// import ComputerIcon from "@mui/icons-material/Computer";
-// import ScienceIcon from "@mui/icons-material/Science";
-// import AddBusinessIcon from "@mui/icons-material/AddBusiness";
-// import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
+import { motion, useCycle } from "framer-motion";
 
-function GridItem ({ frontIcon, backContent }){
+function GridItem({ frontIcon, backContent }) {
   const [isFlipped, setFlipped] = useState(false);
+  const [yPosition, setYPosition] = useState(0);
+  const [cycle, setCycle] = useCycle(-5, 5);
 
   const handleHover = () => {
     setFlipped(!isFlipped);
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCycle();
+    }, 2000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setYPosition(cycle);
+    }, 2000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [cycle]);
 
   return (
     <Grid
@@ -23,26 +41,37 @@ function GridItem ({ frontIcon, backContent }){
       onMouseEnter={handleHover}
       onMouseLeave={handleHover}
     >
-      <Paper className={styles.content}>
-        {isFlipped ? (
-          <div> {backContent} </div>
-        ) : (
-          <div
-            style={{
-              backgroundColor: "#3f51b5",
-              height: "8rem",
-              width: "8rem",
-              borderRadius: "100px",
-              margin: "50px 50px",
-            }}
-          >
-            {frontIcon}
-          </div>
-        )}
-      </Paper>
+      <motion.div
+        style={{ y: yPosition }}
+        animate={{ y: yPosition }}
+        transition={{
+          duration: 1,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "easeInOut",
+        }}
+      >
+        <Paper className={styles.content}>
+          {isFlipped ? (
+            <div> {backContent} </div>
+          ) : (
+            <div
+              style={{
+                backgroundColor: "rgba(38, 162, 102, 0.4)",
+                height: "8rem",
+                width: "8rem",
+                borderRadius: "100px",
+                margin: "50px 50px",
+              }}
+            >
+              {frontIcon}
+            </div>
+          )}
+        </Paper>
+      </motion.div>
     </Grid>
   );
-};
+}
 
 const Courses = () => {
   return (
@@ -66,7 +95,7 @@ const Courses = () => {
             frontIcon={
               <div>
                 <Computer
-                  style={{ color: "white", fontSize: "5rem", margin: "1.4rem" }}
+                  style={{ color: "#26A266", fontSize: "5rem", margin: "1.4rem" }}
                 />
                 <h4 className={styles.subTitlefront}>BTech</h4>
               </div>
@@ -86,7 +115,7 @@ const Courses = () => {
             frontIcon={
               <div>
                 <Science
-                  style={{ color: "white", fontSize: "5rem", margin: "1.4rem" }}
+                  style={{ color: "#26A266", fontSize: "5rem", margin: "1.4rem" }}
                 />
                 <h4 className={styles.subTitlefront}>BSc</h4>
               </div>
@@ -106,7 +135,7 @@ const Courses = () => {
             frontIcon={
               <div>
                 <Business
-                  style={{ color: "white", fontSize: "5rem", margin: "1.4rem" }}
+                  style={{ color: "#26A266", fontSize: "5rem", margin: "1.4rem" }}
                 />
                 <h4 className={styles.subTitlefront}>Business</h4>
               </div>
@@ -126,7 +155,7 @@ const Courses = () => {
             frontIcon={
               <div>
                 <ManageAccounts
-                  style={{ color: "white", fontSize: "5rem", margin: "1.4rem" }}
+                  style={{ color: "#26A266", fontSize: "5rem", margin: "1.4rem" }}
                 />
                 <h4 className={styles.subTitlefront}>CA</h4>
               </div>

@@ -1,11 +1,12 @@
 import React from "react";
-import Layout  from "../Layout";
+import Layout from "../Layout";
 import { Helmet } from "react-helmet";
-import Banner  from "../Component/Homepage/Banner";
-import Ourgoal  from "../Component/Homepage/Ourgoal";
+import Banner from "../Component/Homepage/Banner";
+import Ourgoal from "../Component/Homepage/Ourgoal";
 import University from "../Component/Homepage/University";
 import Courses from "../Component/Homepage/Courses";
-import Navbar from "../Common/Navbar/Navbar";
+import Background from "../Common/Background/Background";
+
 const TITLE = "GetMyNotes";
 const Homepage = () => {
   return (
@@ -14,7 +15,7 @@ const Homepage = () => {
         <title>{TITLE}</title>
       </Helmet>
       <Layout>
-          <Banner />
+        <Banner />
         <Ourgoal />
         <University />
         <Courses />

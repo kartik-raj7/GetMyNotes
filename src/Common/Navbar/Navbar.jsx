@@ -1,5 +1,4 @@
 import React from "react";
-// import { AppBar, Toolbar, Grid, Button } from "@material-ui/core";
 import logo from "../../images/getmynotes.png";
 import styles from "./Navbar.module.scss";
 import { AppBar, Button, Grid, Toolbar } from "@mui/material";
@@ -7,25 +6,19 @@ import { AppBar, Button, Grid, Toolbar } from "@mui/material";
 const Navbar = () => {
   return (
     <div className={styles.appBar}>
-      <AppBar position="static">
+      <AppBar position="static" style={{ backgroundColor: "white" }}>
         <Toolbar>
           <Grid container justifyContent="space-between" alignItems="center">
             <Grid item>
               <img
                 src={logo}
                 alt="GetMyNotes Logo"
-                style={{
-                  cursor: "pointer",
-                  width: "30%",
-                  padding: "4px",
-                  marginLeft: "3rem",
-                }}
                 className={styles.logo}
               />
             </Grid>
             <Grid item style={{ marginRight: "3rem" }}>
-              <Button color="inherit">Sign In</Button>
-              <Button color="inherit">Register</Button>
+              <Button sx={{color:'#26A266'}} color="inherit">Sign In</Button>
+              <Button sx={{color:'#26A266'}} color="inherit">Register</Button>
             </Grid>
           </Grid>
         </Toolbar>

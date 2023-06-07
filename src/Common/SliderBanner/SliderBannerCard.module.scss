@@ -1,0 +1,25 @@
+.sliderBannerCard {
+    margin: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.imagebox {
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    flex: 0 0 auto;
+}
+
+.images {
+    width: 7rem;
+    height: 8rem;
+}
+
+.datadiv {
+    display: flex;
+    justify-content: center;
+    width: 7rem;
+}
