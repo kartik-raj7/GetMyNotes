@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../images/getmynotes.png";
+import logo from "../../images/gmn.png";
 import styles from "./Navbar.module.scss";
 import { AppBar, Button, Grid, Toolbar } from "@mui/material";
 
